@@ -1,0 +1,23 @@
+# Environment
+.env
+venv/
+__pycache__/
+*.pyc
+
+# Database
+*.db
+*.sqlite
+
+# ML Models (large files)
+models/
+eval_results/
+
+# ChromaDB persistent store
+chroma_store/
+
+# Logs
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
