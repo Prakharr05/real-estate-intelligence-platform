@@ -25,3 +25,5 @@ Thumbs.db
 data/
 
 downloaded_files/
+
+.streamlit/secrets.toml

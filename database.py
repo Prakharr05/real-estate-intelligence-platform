@@ -7,7 +7,12 @@ from models import Base
 # 1. Load Environment Variables
 load_dotenv()
 
-DATABASE_URL = os.getenv("DB_URL")
+try:
+    import streamlit as st
+    DATABASE_URL = st.secrets["DB_URL"]
+except Exception:
+    DATABASE_URL = os.getenv("DB_URL")
+
 
 # --- ADD THIS CHECK ---
 if DATABASE_URL is None:

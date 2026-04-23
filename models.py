@@ -42,6 +42,7 @@ class InfrastructureDriver(Base):
 
 class Society(Base, PropertyAlphaMixin):
     __tablename__ = 'societies'
+    __table_args__ = {'schema': 'public'}
     society_name = Column(String(150), index=True)
     bhk_type = Column(String(50))
     area_sqft = Column(Float)
@@ -51,6 +52,7 @@ class Society(Base, PropertyAlphaMixin):
 
 class BuilderFloor(Base, PropertyAlphaMixin):
     __tablename__ = 'builder_floors'
+    __table_args__ = {'schema': 'public'}
     bhk_type = Column(String(50))
     area_sqft = Column(Float)
     floor_no = Column(Integer)
@@ -60,6 +62,7 @@ class BuilderFloor(Base, PropertyAlphaMixin):
 
 class Plot(Base, PropertyAlphaMixin):
     __tablename__ = 'plots'
+    __table_args__ = {'schema': 'public'}
     plot_area_sqyd = Column(Float)
     facing = Column(String(20)) # North, East, etc.
     road_width_meter = Column(Float)
